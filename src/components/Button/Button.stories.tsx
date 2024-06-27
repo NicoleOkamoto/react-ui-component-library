@@ -26,11 +26,13 @@ export const Primary: Story = {
   args: {
 
     label: 'Button',
+    backgroundColor: 'Blue',
   },
 };
 
 export const Secondary: Story = {
   args: {
     label: 'Button',
+    backgroundColor: 'Blue',
   },
 };

@@ -3,10 +3,17 @@ import './Button.css';
 
 export interface ButtonProps {
   label: string;
+  backgroundColor: string;
 }
 
 const Button = (props: ButtonProps) => {
-  return <button>{props.label}</button>;
+  const { label, backgroundColor } = props;
+
+  return (
+    <button style={{ backgroundColor }}>
+      {label}
+    </button>
+  );
 };
 
 export default Button;
