@@ -37,12 +37,22 @@ const StyledButton = styled.button<ButtonProps>`
       color: ${props.backgroundColor};
     `}
 
-    ${(props) =>
+   ${(props) =>
       props.disabled &&
-      css`
-        opacity: 0.6; // Example: reduce opacity for disabled state
-        cursor: not-allowed;
-      `}
+     css`
+       opacity: 0.6; // Example: reduce opacity for disabled state
+       cursor: not-allowed;
+     `}
+
+   @media (max-width: 768px) {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+
+   @media (max-width: 480px) {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
 `;
 
 const Button: React.FC<ButtonProps> = ({ label, backgroundColor, variant = "default", disabled = false, }) => {
