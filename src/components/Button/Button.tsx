@@ -1,19 +1,40 @@
 import React from "react";
-import './Button.css';
+import styled from "styled-components";
 
 export interface ButtonProps {
   label: string;
   backgroundColor: string;
 }
 
-const Button = (props: ButtonProps) => {
-  const { label, backgroundColor } = props;
+// Define styled component with ButtonProps
+const StyledButton = styled.button<ButtonProps>`
+  font-size: 60px;
+  background-color: ${(props) => props.backgroundColor};
+  color: white;
+  border-radius: 40px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+`;
 
+// Destructure label and backgroundColor from props
+const Button: React.FC<ButtonProps> = ({ label, backgroundColor }) => {
   return (
-    <button style={{ backgroundColor }}>
+    <StyledButton backgroundColor={backgroundColor} label={label}>
       {label}
-    </button>
+    </StyledButton>
   );
 };
 
 export default Button;
+
+
+// button {
+//   font-size: 24px;
+//   background-color: black;
+//   color: white;
+//   border-radius: 40px;
+//   padding: 10px 20px;
+//   border: none;
+//   cursor: pointer;
+// }
