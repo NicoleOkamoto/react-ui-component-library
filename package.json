@@ -1,5 +1,8 @@
 {
-  "name": "react-ui-component-library",
+  "name": "@nicoleokamoto/react-ui-component-library",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/nicoleokamoto"
+  },
   "version": "0.0.1",
 
   "scripts": {
