@@ -1,12 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import { ButtonProps } from './Button.types';
 
-export interface ButtonProps {
-  label: string;
-  backgroundColor: string;
-  variant?: "default" | "outlined" | "text"; // Define possible variants
-  disabled?: boolean;
-}
 
 const StyledButton = styled.button<ButtonProps>`
   font-size: 24px;
