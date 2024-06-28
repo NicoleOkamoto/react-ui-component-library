@@ -4,9 +4,9 @@ import styled, { css } from "styled-components";
 import { LabelProps } from "./Label.types";
 
 const StyledLabel = styled.label<LabelProps>`
-  color: ${(props) => props.color || "black"};
+  color: ${(props) => props.color || "#333"};
   font-family: "Helvetica", sans-serif;
-  font-size: ${(props) => props.fontSize || "18px"};
+  font-size: ${(props) => props.fontSize || "22px"};
   font-weight: bold;
   display: inline-block;
   margin: 10px 5px;
@@ -21,13 +21,11 @@ const StyledLabel = styled.label<LabelProps>`
    `}
 
   @media (max-width: 768px) {
-  margin: 5px 3px;
-  padding: 5px 5px;
+    font-size: 18px;
   }
 
   @media (max-width: 480px) {
-  margin: 5px 0px;
-  padding: 0px 0px;
+    font-size: 16px;
   }
 `;
 

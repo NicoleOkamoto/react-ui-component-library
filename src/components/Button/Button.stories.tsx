@@ -19,7 +19,7 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     label: 'Button',
-    backgroundColor: 'Blue',
+    backgroundColor: '#000080',
     disabled: false,
   },
 };
@@ -27,7 +27,7 @@ export const Primary: Story = {
 export const Outlined: Story = {
   args: {
     label: "Outlined Button",
-    backgroundColor: "blue",
+    backgroundColor: "#000080",
     variant: "outlined",
     disabled: false,
   },
@@ -36,7 +36,7 @@ export const Outlined: Story = {
 export const Invisible: Story = {
   args: {
     label: "Invisible Button",
-    backgroundColor: "blue",
+    backgroundColor: "#000080",
     variant: "text",
     disabled: false,
   },
