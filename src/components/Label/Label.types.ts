@@ -3,4 +3,5 @@ export interface LabelProps {
   color?: string;
   fontSize?: string;
   htmlFor?: string;
+  disabled?: boolean;
 }

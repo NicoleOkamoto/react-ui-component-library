@@ -26,6 +26,7 @@ export const Default: Story ={
   text: "Label Text",
   color: "black",
   fontSize: "16px",
+  disabled: false,
   }
 }
 
@@ -34,5 +35,6 @@ args: {
   text: "Colored Label",
   color: "blue",
   fontSize: "16px",
+  disabled: false,
  },
 };
