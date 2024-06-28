@@ -41,10 +41,10 @@ const StyledDropdown = styled.select<DropdownProps>`
   }
 `;
 
-const Dropdown: React.FC<DropdownProps> = ({ name, id, options }) => {
+const Dropdown: React.FC<DropdownProps> = ({ name, id, options, disabled = false, }) => {
   return (
     <div>
-        <StyledDropdown name={name} id={id} options={options}>
+        <StyledDropdown name={name} id={id} options={options} disabled={disabled}>
          {options.map((option) => (
           <option key={option.value} value={option.value}>
             {option.label}

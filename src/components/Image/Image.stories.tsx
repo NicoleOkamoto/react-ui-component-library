@@ -19,6 +19,8 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
   src:'https://reactjs.org/logo-og.png',
-  alt: "React"
+  alt: "React",
+  width: "500px",
+  height: "300px",
   }
 };
