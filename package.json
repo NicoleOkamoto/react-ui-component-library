@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/nicoleokamoto"
   },
-  "version": "0.1.4",
+  "version": "0.1.5",
   "scripts": {
     "rollup": "rollup -c",
     "test": "jest",
