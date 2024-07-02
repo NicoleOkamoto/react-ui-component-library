@@ -2,9 +2,13 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { CardProps } from './Card.types';
 
-const StyledCard = styled.div<{ disabled?: boolean; variant?: 'default' | 'imageRight' }>`
+const StyledCard = styled.div<{
+  disabled?: boolean;
+  variant?: 'default' | 'imageRight';
+}>`
   display: flex;
-  flex-direction: ${({ variant }) => (variant === 'imageRight' ? 'row' : 'column')};
+  flex-direction: ${({ variant }) =>
+    variant === 'imageRight' ? 'row' : 'column'};
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -24,6 +28,16 @@ const StyledCard = styled.div<{ disabled?: boolean; variant?: 'default' | 'image
       cursor: not-allowed;
       color: #a0a0a0;
     `}
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    ${({ variant }) =>
+      variant === 'imageRight' &&
+      css`
+        flex-direction: column-reverse;
+      `}
+  }
 `;
 
 const Title = styled.h1`
@@ -54,7 +68,8 @@ const CTAButton = styled.a<{ disabled?: boolean }>`
 const Content = styled.div<{ variant?: 'default' | 'imageRight' }>`
   flex: 1;
   padding: ${({ variant }) => (variant === 'imageRight' ? '20px' : '0')};
-  text-align: ${({ variant }) => (variant === 'imageRight' ? 'left' : 'center')};
+  text-align: ${({ variant }) =>
+    variant === 'imageRight' ? 'left' : 'center'};
 `;
 
 const ImageRight = styled.div<{ image: string }>`
@@ -62,11 +77,12 @@ const ImageRight = styled.div<{ image: string }>`
   background-image: url(${(props) => props.image});
   background-size: cover;
   background-position: center;
-  min-height: 200px;
+  min-height: 400px;
   border-radius: 8px;
+  width: 100%;
 
   @media (max-width: 768px) {
-    min-height: 150px;
+    min-height: 250px;
   }
 `;
 
@@ -104,7 +120,14 @@ const ImageText = styled.p`
   font-size: 16px;
 `;
 
-const Card: React.FC<CardProps> = ({ title, images, ctaText, ctaLink, disabled = false, variant = 'default' }) => {
+const Card: React.FC<CardProps> = ({
+  title,
+  images,
+  ctaText,
+  ctaLink,
+  disabled = false,
+  variant = 'default',
+}) => {
   return (
     <StyledCard disabled={disabled} variant={variant}>
       <Content variant={variant}>

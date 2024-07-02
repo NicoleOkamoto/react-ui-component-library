@@ -8,7 +8,6 @@ const meta: Meta<typeof RadioButton> = {
   argTypes: {
     name: { control: 'text' },
     value: { control: 'text' },
-    checked: { control: 'boolean' },
     disabled: { control: 'boolean' },
   },
   parameters: {
@@ -23,18 +22,18 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
+    type: 'radio',
     name: 'options',
     value: 'option1',
-    checked: false,
     disabled: false,
   },
 };
 
 export const Disabled: Story = {
   args: {
+    type: 'radio',
     name: 'options',
     value: 'option1',
-    checked: false,
     disabled: true,
   },
 };

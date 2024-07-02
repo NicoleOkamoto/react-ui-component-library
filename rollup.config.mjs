@@ -5,12 +5,7 @@ import dts from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
 import terser from "@rollup/plugin-terser";
 import babel from 'rollup-plugin-babel';
-
-
 import packageJson from "./package.json" assert { type: "json" };
-
-
-// const packageJson = require("./package.json");
 
 export default [
   {
@@ -41,7 +36,7 @@ export default [
         ],
         plugins: ['babel-plugin-styled-components'],
       }),
-    terser(),
+      terser(),
     ],
     external: ['react', 'react-dom', 'styled-components'],
   },

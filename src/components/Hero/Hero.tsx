@@ -11,7 +11,7 @@ const StyledHero = styled.div<{ backgroundImage: string; disabled?: boolean }>`
   text-align: center;
   min-height: 600px;
   width: 1200px;
-  background-image: url(${props => props.backgroundImage});
+  background-image: url(${(props) => props.backgroundImage});
   background-size: cover; /* Cover the entire container */
   background-position: center;
   color: white;
@@ -32,13 +32,13 @@ const StyledHero = styled.div<{ backgroundImage: string; disabled?: boolean }>`
   @media (max-width: 768px) {
     min-height: 150px;
     min-width: 300px;
-    }
+  }
 
   @media (max-width: 576px) {
     min-height: 100px;
     min-width: 200px;
     padding: 10px;
-    }
+  }
 `;
 
 const Overlay = styled.div`
@@ -96,7 +96,14 @@ const CTAButton = styled.a<{ disabled?: boolean }>`
   }
 `;
 
-const Hero: React.FC<HeroProps> = ({ title, subtitle, backgroundImage, ctaText, ctaLink, disabled = false }) => {
+const Hero: React.FC<HeroProps> = ({
+  title,
+  subtitle,
+  backgroundImage,
+  ctaText,
+  ctaLink,
+  disabled = false,
+}) => {
   return (
     <StyledHero backgroundImage={backgroundImage} disabled={disabled}>
       <Overlay />

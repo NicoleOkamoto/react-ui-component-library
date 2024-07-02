@@ -16,7 +16,8 @@ const StyledTable = styled.table<{ disabled?: boolean }>`
     css`
       background-color: #e0e0e0;
       cursor: not-allowed;
-      th, td {
+      th,
+      td {
         color: #a0a0a0;
         border-color: #a0a0a0;
       }
@@ -59,7 +60,12 @@ const StyledTr = styled.tr`
   }
 `;
 
-const Table: React.FC<TableProps> = ({ headers, data, caption, disabled = false }) => {
+const Table: React.FC<TableProps> = ({
+  headers,
+  data,
+  caption,
+  disabled = false,
+}) => {
   return (
     <StyledTable disabled={disabled}>
       {caption && <StyledCaption>{caption}</StyledCaption>}

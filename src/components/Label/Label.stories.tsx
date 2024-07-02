@@ -21,20 +21,20 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story ={
+export const Default: Story = {
   args: {
-  text: "Label Text",
-  color: "black",
-  fontSize: "16px",
-  disabled: false,
-  }
-}
+    text: 'Label Text',
+    color: 'black',
+    fontSize: '16px',
+    disabled: false,
+  },
+};
 
-export const Colored: Story ={
-args: {
-  text: "Colored Label",
-  color: "blue",
-  fontSize: "16px",
-  disabled: false,
- },
+export const Colored: Story = {
+  args: {
+    text: 'Colored Label',
+    color: 'blue',
+    fontSize: '16px',
+    disabled: false,
+  },
 };

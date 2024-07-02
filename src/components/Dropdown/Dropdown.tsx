@@ -1,9 +1,9 @@
-import React from "react";
-import styled, { css } from "styled-components";
+import React from 'react';
+import styled, { css } from 'styled-components';
 import { DropdownProps } from './Dropdown.types';
 
 const StyledDropdown = styled.select<DropdownProps>`
-  font-size: 26px;
+  font-size: 18px;
   border-radius: 40px;
   padding: 10px 20px;
   border: none;
@@ -27,7 +27,6 @@ const StyledDropdown = styled.select<DropdownProps>`
     css`
       opacity: 0.6; // Example: reduce opacity for disabled state
       cursor: not-allowed;
-
     `}
 
   @media (max-width: 768px) {
@@ -41,14 +40,19 @@ const StyledDropdown = styled.select<DropdownProps>`
   }
 `;
 
-const Dropdown: React.FC<DropdownProps> = ({ name, id, options, disabled = false, }) => {
+const Dropdown: React.FC<DropdownProps> = ({
+  name,
+  id,
+  options,
+  disabled = false,
+}) => {
   return (
     <div>
-        <StyledDropdown name={name} id={id} options={options} disabled={disabled}>
-         {options.map((option) => (
+      <StyledDropdown name={name} id={id} options={options} disabled={disabled}>
+        {options.map((option) => (
           <option key={option.value} value={option.value}>
             {option.label}
-        </option>
+          </option>
         ))}
       </StyledDropdown>
     </div>

@@ -25,21 +25,18 @@ export const Primary: Story = {
 
 export const Outlined: Story = {
   args: {
-    label: "Outlined Button",
-    backgroundColor: "#000080",
-    variant: "outlined",
+    label: 'Outlined Button',
+    backgroundColor: '#000080',
+    variant: 'outlined',
     disabled: false,
   },
 };
 
 export const Invisible: Story = {
   args: {
-    label: "Invisible Button",
-    backgroundColor: "#000080",
-    variant: "text",
+    label: 'Invisible Button',
+    backgroundColor: '#000080',
+    variant: 'text',
     disabled: false,
   },
 };
-
-
-
