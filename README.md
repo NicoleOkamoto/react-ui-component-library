@@ -9,8 +9,6 @@ A collection of reusable UI components built using React, Webpack 5, Storybook, 
 - [Components](#components)
 - [Development](#development)
 - [Storybook](#storybook)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 
