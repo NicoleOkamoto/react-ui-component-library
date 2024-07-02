@@ -4,7 +4,7 @@ import { ButtonProps } from './Button.types';
 
 
 const StyledButton = styled.button<ButtonProps>`
-  font-size: 24px;
+  font-size: 18px;
   border-radius: 40px;
   padding: 10px 20px;
   border: none;
