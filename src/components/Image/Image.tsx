@@ -5,6 +5,8 @@ import { ImageProps } from './Image.types';
 const StyledImage = styled.img<ImageProps>`
   height: ${(props) => (props.height ? props.height : 'auto')};
   width: ${(props) => (props.width ? props.width : 'auto')};
+  max-width: 100%;
+  display: block;
 
   ${(props) =>
     props.disabled &&
@@ -13,6 +15,11 @@ const StyledImage = styled.img<ImageProps>`
       filter: grayscale(100%);
       pointer-events: none;
     `}
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 const Image: React.FC<ImageProps> = ({ src, alt, width, height, disabled }) => {
