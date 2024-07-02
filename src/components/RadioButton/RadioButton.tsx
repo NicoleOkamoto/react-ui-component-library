@@ -16,7 +16,7 @@ const RadioButton: React.FC<RadioButtonProps> = ({ name, value, disabled = false
   const [checked, setChecked] = useState(false);
 
   const handleClick = () => {
-    setChecked(!checked); // Toggle the checked state
+    setChecked(!checked);
   };
 
   return (

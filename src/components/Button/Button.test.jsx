@@ -15,7 +15,7 @@ describe("Button", () => {
 
   test("background color changes when the button is disabled", () => {
     const { getByText } = render(
-      <Button label="Disabled Button" backgroundColor="green" disabled />
+      <Button label="Disabled Button" disabled />
     );
     const buttonElement = getByText("Disabled Button");
     expect(buttonElement).toHaveStyle("opacity: 0.6");

@@ -30,15 +30,6 @@ export const Default: Story = {
   },
 };
 
-export const Checked: Story = {
-  args: {
-    name: 'options',
-    value: 'option1',
-    checked: true,
-    disabled: false,
-  },
-};
-
 export const Disabled: Story = {
   args: {
     name: 'options',
