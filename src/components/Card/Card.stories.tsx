@@ -36,5 +36,6 @@ export const ImageRight: Story = {
     ctaText: 'Learn More',
     ctaLink: 'Test',
     variant: 'imageRight',
+    disabled: true,
   }
 };

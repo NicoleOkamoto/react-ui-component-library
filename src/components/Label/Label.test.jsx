@@ -3,15 +3,23 @@ import { getByText, render } from "@testing-library/react";
 import Label from "./Label";
 
 describe("Label", () => {
-  test("renders the Label component", () => {
-    render(<Label fontSize="16px" text="Label Text" htmlFor="test" color="black" />);
+  test("Label component is visible", () => {
+    const { getByText } = render(<Label fontSize="16px" text="Label Text" htmlFor="test" color="black" />);
+    const label = getByText("Label Text")
+    expect(label).toBeVisible();
   });
 
-  test("Label component change color", () => {
-    const { getByText } = render(<Label text="This is a label" htmlFor="www.google.com" color="black" fontSize="20px"/> );
-    const labelElement = getByText("This is a label");
+  test("Label component change background color when disabled and cursor is not allowed", () => {
+    const { getByText } = render(<Label
+      color="black"
+      disabled
+      fontSize="16px"
+      text="Label Text"
+    /> );
+    const labelElement = getByText("Label Text");
     expect(labelElement).toBeVisible();
-    expect(labelElement).toHaveStyle("color: black");
+    expect(labelElement).toHaveStyle("cursor: not-allowed");
+    expect(labelElement).toHaveStyle("opacity: 0.6");
   });
 
 });
