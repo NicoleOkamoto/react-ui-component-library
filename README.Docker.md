@@ -1,17 +1,35 @@
-### Building and running your application
+## RunningInDocker
 
-When you're ready, start your application by running:
-`docker compose up --build`.
+# Setting up and Running Your React UI Component Library in Docker
 
-### Deploying your application to the cloud
+This Docker setup will allow you to host your React UI Component Library on localhost:8083.
 
-First, build your image, e.g.: `docker build -t okamoto_nicole_coding_assignment12 .`.
-If your cloud uses a different CPU architecture than your development
-machine (e.g., you are on a Mac M1 and your cloud provider is amd64),
-you'll want to build the image for that platform, e.g.:
-`docker build --platform=linux/amd64 -t okamoto_nicole_coding_assignment12 .`.
+## Prerequisites
 
-Then, push it to your registry, e.g. `docker push myregistry.com/okamoto_nicole_coding_assignment12`.
+- Docker installed on your machine
+
+## Instructions
+
+### Build Docker Image
+
+1. Clone the repository or navigate to your project directory.
+2. Build the Docker image:
+
+```
+docker build -t okamoto_nicole_assignment12 .
+```
+
+### Run Docker Container
+
+3. Run the Docker container:
+
+```
+docker run -p 8083:80 --name okamoto_nicole_assignment12 okamoto_nicole_assignment12
+```
+
+### Access the Application
+
+4. Open your web browser and go to [http://localhost:8083](http://localhost:8083) to view your React UI Component Library.
 
 Consult Docker's [getting started](https://docs.docker.com/go/get-started-sharing/)
 docs for more detail on building and pushing.
