@@ -106,7 +106,7 @@
     // "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
 
     // Default
-    "target": "es5",
+    "target": "esnext",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,

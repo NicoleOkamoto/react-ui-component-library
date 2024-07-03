@@ -8,11 +8,24 @@
     "rollup": "rollup -c",
     "test": "jest",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build": "rollup -c"
   },
   "author": "Nicole Okamoto",
   "license": "ISC",
   "description": "",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@rollup/plugin-babel": "6.0.4",
+    "@rollup/plugin-terser": "^0.4.4",
+    "source-map-loader": "^5.0.0",
+    "styled-components": "^6.1.11"
+  },
   "devDependencies": {
     "@babel/core": "^7.24.7",
     "@babel/preset-env": "^7.24.7",
@@ -36,32 +49,26 @@
     "@types/jest": "^29.5.12",
     "@types/react": "^18.3.3",
     "babel-jest": "^29.7.0",
+    "babel-plugin-styled-components": "^2.1.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "prettier": "^3.3.2",
     "react": "^18.3.1",
-    "rollup": "^4.18.0",
+    "react-scripts": "^3.0.1",
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^8.1.11",
     "tslib": "^2.6.3",
-    "typescript": "^5.5.2"
+    "typescript": "^4.9.5"
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "files": [
-    "dist"
-  ],
-  "types": "dist/index.d.ts",
-  "dependencies": {
-    "@rollup/plugin-terser": "^0.4.4",
-    "babel-plugin-styled-components": "^2.1.4",
-    "rollup-plugin-babel": "^4.4.0",
-    "source-map-loader": "^5.0.0",
-    "styled-components": "^6.1.11"
+  "peerDependencies": {
+    "@types/react": "^18.0.28",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.0.0"
   },
   "resolutions": {
-    "styled-components": "^5"
+    "styled-components": "^5.0.0"
   }
 }

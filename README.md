@@ -9,6 +9,7 @@ A collection of reusable UI components built using React, Webpack 5, Storybook, 
 - [Components](#components)
 - [Development](#development)
 - [Storybook](#storybook)
+- [Docker](#RunningInDocker)
 
 ## Installation
 
@@ -152,3 +153,42 @@ npm run storybook
 ```
 
 Storybook will start on `http://localhost:6006`.
+
+## RunningInDocker
+
+```markdown
+# Setting up and Running Your React UI Component Library in Docker
+
+This Docker setup will allow you to host your React UI Component Library on localhost:8083.
+
+## Prerequisites
+
+- Docker installed on your machine
+
+## Instructions
+
+### Build Docker Image
+
+1. Clone the repository or navigate to your project directory.
+2. Build the Docker image:
+```
+
+docker build -t okamoto_nicole_assignment12 .
+
+```
+
+### Run Docker Container
+
+3. Run the Docker container:
+```
+
+docker run -p 8083:80 --name okamoto_nicole_assignment12 okamoto_nicole_assignment12
+
+```
+
+### Access the Application
+
+4. Open your web browser and go to [http://localhost:8083](http://localhost:8083) to view your React UI Component Library.
+
+
+```

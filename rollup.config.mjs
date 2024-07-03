@@ -4,7 +4,7 @@ import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
 import terser from "@rollup/plugin-terser";
-import babel from 'rollup-plugin-babel';
+import babel from '@rollup/plugin-babel';
 import packageJson from "./package.json" assert { type: "json" };
 
 export default [
@@ -14,12 +14,12 @@ export default [
       {
         file: packageJson.main,
         format: "cjs",
-        sourcemap: false,
+        sourcemap: true,
       },
       {
         file: packageJson.module,
         format: "esm",
-        sourcemap: false,
+        sourcemap: true,
       },
     ],
     plugins: [
@@ -29,6 +29,7 @@ export default [
       postcss(),
       babel({
         exclude: 'node_modules/**',
+        babelHelpers: 'bundled',
         presets: [
           '@babel/preset-env',
           '@babel/preset-react',
