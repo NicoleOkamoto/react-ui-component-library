@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { TextProps } from './Text.types';
 
-const StyledText = styled.div<TextProps>`
+const StyledText = styled.p<TextProps>`
   color: ${(props) => props.color || 'black'};
   font-family: 'Helvetica', sans-serif;
   font-size: ${(props) => props.fontSize || '14px'};
