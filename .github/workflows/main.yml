@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Run lint-staged
+        run: npx lint-staged
+
+      - name: Build Docker image
+        run: |
+          docker build -t lastName_firstName_coding_assignment13 .
+          docker tag lastName_firstName_coding_assignment13:latest lastName_firstName_coding_assignment13:latest
+
+      - name: Push Docker image to Docker Hub (if needed)
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: |
+            lastName_firstName_coding_assignment13:latest
