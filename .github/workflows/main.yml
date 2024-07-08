@@ -38,4 +38,4 @@ jobs:
           context: .
           push: true
           tags: |
-            lastName_firstName_coding_assignment13:latest
+            lastname_firstname_coding_assignment13:latest
