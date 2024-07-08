@@ -158,7 +158,7 @@ Storybook will start on `http://localhost:6006`.
 
 # Setting up and Running Your React UI Component Library in Docker
 
-This Docker setup will allow you to host your React UI Component Library on localhost:8083.
+This Docker setup will allow you to host your React UI Component Library on localhost:8018.
 
 ## Prerequisites
 
@@ -172,7 +172,7 @@ This Docker setup will allow you to host your React UI Component Library on loca
 2. Build the Docker image:
 
 ```
-docker build -t okamoto_nicole_assignment12 .
+docker build -t okamoto_nicole_assignment13 .
 ```
 
 ### Run Docker Container
@@ -180,9 +180,9 @@ docker build -t okamoto_nicole_assignment12 .
 3. Run the Docker container:
 
 ```
-docker run -p 8083:80 --name okamoto_nicole_assignment12 okamoto_nicole_assignment12
+docker run -p 8083:80 --name okamoto_nicole_assignment13 okamoto_nicole_assignment13
 ```
 
 ### Access the Application
 
-4. Open your web browser and go to [http://localhost:8083](http://localhost:8083) to view your React UI Component Library.
+4. Open your web browser and go to [http://localhost:8018](http://localhost:8018) to view your React UI Component Library.
