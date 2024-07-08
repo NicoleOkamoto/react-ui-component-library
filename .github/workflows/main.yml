@@ -29,8 +29,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t lastName_firstName_coding_assignment13 .
-          docker tag lastName_firstName_coding_assignment13:latest lastName_firstName_coding_assignment13:latest
+          docker build -t lastname_firstname_coding_assignment13 .
+          docker tag lastname_firstname_coding_assignment13:latest lastname_firstname_coding_assignment13:latest
 
       - name: Push Docker image to Docker Hub (if needed)
         uses: docker/build-push-action@v2
