@@ -4,3 +4,4 @@
 echo "[Husky] pre-commit"
 npm test
 npx lint-staged
+
