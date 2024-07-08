@@ -81,7 +81,6 @@
       "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
       "post-applypatch": "echo \"[Husky] post-applypatch\"",
       "pre-commit": "echo \"[Husky] pre-commit\""
-      // "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {

@@ -3,6 +3,8 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { LabelProps } from './Label.types';
 
+//This is for test purpose only.
+
 const StyledLabel = styled.label<LabelProps>`
   color: ${(props) => props.color || '#333'};
   font-family: 'Helvetica', sans-serif;
