@@ -29,10 +29,10 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t lastname_firstname_coding_assignment13 .
-          docker tag lastname_firstname_coding_assignment13:latest lastname_firstname_coding_assignment13:latest
-          docker login docker.pkg.github.com -u nicoleokamoto@icloud.com -p ${{ secrets.DOCKER_HUB_ACCESS}}
-          docker push docker.pkg.github.com/nicoleokamoto/react-ui-component-library/lastname_firstname_coding_assignment13:latest
+          docker build -t docker.pkg.github.com/nicoleokamoto/react-ui-component-library/okamoto_nicole_assignment13 .
+          docker login docker.pkg.github.com -u nicoleokamoto@icloud.com -p ${{ secrets.DOCKER_HUB_ACCESS }}
+          docker tag docker.pkg.github.com/nicoleokamoto/react-ui-component-library/okamoto_nicole_assignment13:latest docker.pkg.github.com/nicoleokamoto/react-ui-component-library/okamoto_nicole_assignment13:latest
+          docker push docker.pkg.github.com/nicoleokamoto/react-ui-component-library/okamoto_nicole_assignment13:latest
 
       - name: Push Docker image to Docker Hub (if needed)
         uses: docker/build-push-action@v2
