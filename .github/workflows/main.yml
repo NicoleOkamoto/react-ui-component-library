@@ -30,7 +30,7 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t docker.pkg.github.com/nicoleokamoto/react-ui-component-library/okamoto_nicole_assignment13 .
-          docker login docker.pkg.github.com -u nicoleokamoto -p ${{ secrets.DOCKER_HUB_ACCESS }}
+          docker login docker.pkg.github.com -u nicoleokamoto@icloud.com -p ${{ secrets.DOCKER_HUB_ACCESS }}
           docker push docker.pkg.github.com/nicoleokamoto/react-ui-component-library/okamoto_nicole_assignment13:latest
 
       - name: Push Docker image to Docker Hub (if needed)
