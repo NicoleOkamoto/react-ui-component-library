@@ -40,4 +40,4 @@ jobs:
           context: .
           push: true
           tags: |
-            lastname_firstname_coding_assignment13:latest
+            okamoto_nicole_assignment13:latest
