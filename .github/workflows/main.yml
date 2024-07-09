@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Run ESLint
-        run: npx eslint . --ext .js,.jsx,.ts,.tsx
+        run: npx eslint .
 
       - name: Run tests
         run: npm test
