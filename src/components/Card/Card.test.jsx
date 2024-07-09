@@ -23,7 +23,7 @@ describe('Card', () => {
   });
 
   test('The card component change background color when disabled and cursor is not allowed', () => {
-    const { getByText, container } = render(
+    const { container } = render(
       <Card
         ctaLink="Test"
         ctaText="Learn More"

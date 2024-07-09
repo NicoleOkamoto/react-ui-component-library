@@ -1272,7 +1272,7 @@
       const xt = /^\[([^\]]*)]\( *((?:\([^)]*\)|[^() ])*) *"?([^)"]*)?"?\)/,
         bt = /^!\[([^\]]*)]\( *((?:\([^)]*\)|[^() ])*) *"?([^)"]*)?"?\)/,
         $t = [i, d, p, $, S, v, A, R, pt, yt, mt, ht],
-        vt = [...$t, /^[^\n]+(?:  \n|\n{2,})/, z, L];
+        vt = [...$t, /^[^\n]+(?: {2}\n|\n{2,})/, z, L];
       function St(t) {
         return t
           .replace(/[ÀÁÂÃÄÅàáâãäåæÆ]/g, 'a')
@@ -16042,14 +16042,12 @@
                   newChild = { type: 'text', value: ''.concat(text, '\n') };
                 if (0 === i) {
                   var _line = createLine(
-                    tree
-                      .slice(lastLineBreakIndex + 1, index)
-                      .concat(
-                        createLineElement({
-                          children: [newChild],
-                          className: node.properties.className,
-                        }),
-                      ),
+                    tree.slice(lastLineBreakIndex + 1, index).concat(
+                      createLineElement({
+                        children: [newChild],
+                        className: node.properties.className,
+                      }),
+                    ),
                     lineNumber2,
                   );
                   newTree.push(_line);
@@ -18162,7 +18160,7 @@
         };
         return (createScope.scopeName = baseScope.scopeName), createScope;
       }
-      var useLayoutEffect2 = Boolean(globalThis?.document)
+      var useLayoutEffect2 = globalThis?.document
           ? react.useLayoutEffect
           : () => {},
         useReactId = react_namespaceObject['useId'.toString()] || (() => {}),

@@ -12197,7 +12197,7 @@ function prepareStory(
       return updatedContext;
     },
     applyBeforeEach = async (context) => {
-      let cleanupCallbacks = new Array();
+      let cleanupCallbacks = [];
       for (let beforeEach of [
         ...normalizeArrays(projectAnnotations.beforeEach),
         ...normalizeArrays(componentAnnotations.beforeEach),
