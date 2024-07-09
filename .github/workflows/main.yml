@@ -25,7 +25,7 @@ jobs:
         run: npx eslint . --fix
 
       - name: Run Prettier
-        run: prettier --write .
+        run: npx prettier --write .
 
       - name: Run tests
         run: npm run test
