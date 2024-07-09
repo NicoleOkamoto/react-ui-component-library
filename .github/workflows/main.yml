@@ -22,13 +22,13 @@ jobs:
         run: npm install
 
       - name: Run ESLint
-        run: npx eslint --fix
+        run: npx eslint . --fix
+
+      - name: Run Prettier
+        run: prettier --write .
 
       - name: Run tests
-        run: npm test
-
-      - name: Run lint-staged
-        run: npx lint-staged
+        run: npm run test
 
       - name: Setup Docker Buildx
         uses: docker/setup-buildx-action@v1
