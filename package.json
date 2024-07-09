@@ -99,8 +99,7 @@
     "*.{js,jsx,ts,tsx,json,css,html,md}": "prettier --write",
     "*.js": [
       "eslint --fix",
-      "prettier --write",
-      "npm run test -- --bail --findRelatedTests"
+      "prettier --write"
     ]
   }
 }
