@@ -2,6 +2,8 @@
 
 A collection of reusable UI components built using React, Webpack 5, Storybook, and Styled Components.
 
+![UI Library](images/Storybook UI Components.png)
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -84,6 +86,7 @@ const App = () => (
 ### Button
 
 A customizable button component.
+![Button](images/Button.png)
 
 ### Label
 
