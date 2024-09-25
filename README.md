@@ -2,7 +2,7 @@
 
 A collection of reusable UI components built using React, Webpack 5, Storybook, and Styled Components.
 
-![UI Library](images/Storybook UI Components.png)
+![UI Library](images/UI_Components.png)
 
 ## Table of Contents
 
@@ -31,16 +31,12 @@ import {
   Label,
   Text,
   Table,
-  TableHeader,
-  TableRow,
-  TableCell,
-  TableFooter,
   Dropdown,
   RadioButton,
   Img,
   HeroImage,
   Card,
-} from '@your-username/react-ui-component-library';
+} from '@nicoleokamoto/react-ui-component-library';
 
 const App = () => (
   <div>
@@ -91,50 +87,42 @@ A customizable button component.
 ### Label
 
 A simple label component.
+![Label](images/Label.png)
 
 ### Text
 
 A basic text component.
+![Text](images/Text.png)
 
 ### Table
 
 A table component with support for header, rows, cells, and footer.
-
-### TableHeader
-
-A table header component.
-
-### TableRow
-
-A table row component.
-
-### TableCell
-
-A table cell component.
-
-### TableFooter
-
-A table footer component.
+![Table](images/Table.png)
 
 ### Dropdown
 
 A dropdown component for selecting options.
+![Dropdown Button](images/Dropdown.png)
 
 ### RadioButton
 
 A radio button component.
+![Radio Button](images/RadioButton.png)
 
 ### Img
 
 An image component.
+![Image ](images/Image.png)
 
 ### HeroImage
 
 A hero image component.
+![Hero](images/Hero.png)
 
 ### Card
 
 A card component with support for images and call-to-action buttons.
+![Card](images/card.png)
 
 ## Development
 
@@ -175,7 +163,7 @@ This Docker setup will allow you to host your React UI Component Library on loca
 2. Build the Docker image:
 
 ```
-docker build -t okamoto_nicole_assignment13 .
+docker build -t okamoto_nicole_ui_garden .
 ```
 
 ### Run Docker Container
@@ -183,7 +171,7 @@ docker build -t okamoto_nicole_assignment13 .
 3. Run the Docker container:
 
 ```
-docker run -p 8083:80 --name okamoto_nicole_assignment13 okamoto_nicole_assignment13
+docker run -p 8083:80 --name okamoto_nicole_ui_garden okamoto_nicole_ui_garden
 ```
 
 ### Access the Application
